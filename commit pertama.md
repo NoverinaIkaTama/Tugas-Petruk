@@ -3,7 +3,9 @@
 #include <iostream>
 using namespace std;
 int main()
-{'
+{
+	int baris;
+	int kolom;
   int puzzle[15][15] ={{'t','g','b','w','w','i','n','t','e','r','w','s','e','s','n'},
 		               {'a','a','u','n','t','t','m','m','h','f','o','o','d','n','b'},
 		               {'j','l','w','c','q','l','d','z','m','p','m','v','d','m','r'},
@@ -21,9 +23,9 @@ int main()
 
 					int i,j;
 					string tmp;
-					for(i=0;i<10;i++){
+					for(i=0;i<15;i++){
 						tmp.clear();
-						for(j=0;j<10;j++){
+						for(j=0;j<15;j++){
 							tmp+=puzzle[i][j];
 						}
 						cout<<tmp<<endl;
