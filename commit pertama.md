@@ -28,6 +28,35 @@ int main()
 						}
 						cout<<tmp<<endl;
 					}
+ for(int i=0; i<word.length();++i )
+   {
+   cout<<"Enter a char to guess the word\n";
+   cin>>guess;
+	   int flag=0;
+	   if(count ==4)
+	   {
+		   cout<<"you guessed the word\n";
+
+	   }
+	   for(int j=0; j<word.length();++j)
+	   {
+	   if(guess==word[j])
+	   {
+		   cout<<"Letter found\n";
+		   count++;
+		   flag=1;
+
+	
+	   }
+	   }
+	   if (flag==0) 
+	   {
+		   cout<<"Letter not found\n";
+	   }
+   }
+					
+					
+					
 
 return 0;
 }
