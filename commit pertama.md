@@ -100,3 +100,62 @@ lagi:
                 x=0;
             }
         }
+        for(int dn = 0 ; dn < 15 ; dn++){
+            for(int i=0; i<=(15-panjang_kata); i++) {
+            diagonal=-1;
+                for(int j=i; j<=i+(panjang_kata-1); j++) {
+                    ++diagonal;
+                    if(*(*(Y+j)+dn+diagonal) == kata[m][x]) ada[x] = 1;
+                    else ada[x] = 0;
+                    x++;
+                }
+                for(int k=0; k<panjang_kata; k++) {
+                    if(ada[k]==1) {
+                        result = 1;
+                        hasil[m]+=result;
+                    }
+                    else {
+                        result = 0;
+                        break;
+                    }
+                    if(hasil[m]==panjang_kata) { 
+                        hasil_akhir[m]=1; 
+                        goto next; 
+                    }
+                }
+                hasil[m]=0;
+                x=0;
+            }
+        }
+
+        for(int dr = 14 ; dr >= 0 ; dr--){
+            for(int i=0; i<=(15-panjang_kata); i++) {
+            diagonal=-1;
+                for(int j=i; j<=i+(panjang_kata-1); j++) {
+                    ++diagonal;
+                    if(*(*(Y+j)+dr-diagonal) == kata[m][x]) ada[x] = 1;
+                    else ada[x] = 0;
+                    x++;
+                }
+                for(int k=0; k<panjang_kata; k++) {
+                    if(ada[k]==1) {
+                        result = 1;
+                        hasil[m]+=result;
+                    }
+                else {
+                        result = 0;
+                        break;
+                    }
+                if(hasil[m]==panjang_kata) { 
+                        hasil_akhir[m]=1; 
+                        goto next; 
+                    }
+                }
+                hasil[m]=0;
+                x=0;
+            }
+        }
+        next:
+        x=0;
+    }
+
