@@ -158,4 +158,29 @@ lagi:
         next:
         x=0;
     }
+cout<<endl<<"Hasil pencarian kata : "<<endl;
+    for(int a=0; a<juml_kata; a++) {
+        if(hasil_akhir[a]==1)
+        {
+            cout<<a+1<<". ADA"<<endl;
+        }
+        else cout<<a+1<<". TIDAK ADA"<<endl;
+    }
+    char yt;
+    cout<<endl;
+    cout<<"ingin mencoba lagi?(Y/T) = ";
+    cin>>yt;
+	cout<<endl;
+    if (yt=='y'||yt=='Y'){
+    	goto lagi;
+	} 
+	else (yt=='t'||yt=='T');{
+		goto exit;
+	}
+    
+    
+    exit:
+    	cout<<"Terimakasih";
+    return 0;
+}
 
